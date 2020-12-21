@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Hello, world!</title>
+    <style>
+      body{
+  
+        background-color:#4E1116 ;
+      }
+      .card {  
+        background-color: black;   
+        position: relative;    /*my additional class name -for card*/
+    top:45%;
+    margin-top:80px;
+    left:40%;
+    {{!-- width: auto; --}}
+}
+.far fa-id-card{
+  font-size: 30px;
+  letter-spacing: 25px;
+}
+.fab, .fas, .far{
+font-weight: 300px;
+color: brown;
+}
+.list-group-item{
+ 
+  background-color: black;
+}
+a{
+   color:white;
+
+}
+a:hover{
+  color: #4E1116;
+}
+.card-body{
+  color:white;
+}
+marquee{
+  color:brown;
+}
+    </style>
+  </head>
+  <body>
+    <div class="card d-flex justify-content-center " style="width: 350px; height:400px;">
+  {{!-- <i class="far fa-id-card mx-auto" width="90px"></i> --}}
+  <div class="card-body">
+    <h5 class="card-title"><i class="far fa-id-card mx-auto"></i>  Details:</h5>
+    <p class="card-text">For more information feel free to contact me.</p>
+    
+  </div>
+  <marquee behavior="" direction=""><i class="far fa-address-book">Contact information:</i></marquee>
+  
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><i class="fas fa-envelope"><a href="https://mail.google.com/mail/u/0/#inbox">    shahmanvi123@gmail.com</a></i></li>
+    <li class="list-group-item"><i class="fab fa-linkedin"><a href="https://www.linkedin.com/">     linkedin.com/in/manvishah06</a></i></li>
+    <li class="list-group-item"><i class="fab fa-github"><a href="https://github.com/manvishah">    github.com/manvishah</a></i></li>
+  </ul>
+  <div class="card-body">
+    <a href="/about" class="card-link">Go back</a>
+    
+  </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+
