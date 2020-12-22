@@ -1,80 +1,161 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>Hello, world!</title>
-    <style>
-      body{
-  
-        background-color:#4E1116 ;
-      }
-      .card {  
-        background-color: black;   
-        position: relative;    /*my additional class name -for card*/
-    top:45%;
-    margin-top:80px;
-    left:40%;
-    {{!-- width: auto; --}}
-}
-.far fa-id-card{
-  font-size: 30px;
-  letter-spacing: 25px;
-}
-.fab, .fas, .far{
-font-weight: 300px;
-color: brown;
-}
-.list-group-item{
- 
-  background-color: black;
-}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <title>Hello, world!</title>
+  <style>
+    body {
+
+      background-color: #4E1116;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+    * {
+      /* font-family: 'Sansita Swashed', cursive; */
+      margin: 0;
+      padding: 0;
+
+
+    }
+
+    div.container {
+      background: url("../static/contact.jpg");
+
+      width: 100wh;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      opacity: 0.9;
+    }
+
+    div.container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 20px;
+      min-height: 360px;
+
+    }
+
+    form {
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-family: 'Roboto Slab', serif;
+    }
+
+    input,
+    textarea {
+      width: 250%;
+      padding: 4px;
+      margin: 5px;
+      border-radius: 7px;
+      border: 2px solid black;
+      outline: none;
+    }
+
+    .btn {
+      padding: 5px;
+      margin: 8px;
+      background-color: rgb(231, 125, 125);
+      color: black;
+      border: 2px solid black;
+      border-radius: 4px;
+      width: 250%;
+      cursor: pointer;
+      outline: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: brown;
+    }
+
+    .list-group-item {
+      position: relative;
+      display: block;
+      padding: .75rem 1.25rem;
+      margin-bottom: -1px;
+      background-color: #4E1116;
+      border: 1px solid #4E1116;
+    }
+h2{
+      color: black;
+      text-align: left;
+      font-size: 28px;
+      margin: 1px;
+      padding: 1px;
+    }
+
 a{
-   color:white;
-
+    text-decoration: none;
+    color:black;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 28px 13px;
+    font-size: 15px;
 }
 a:hover{
-  color: #4E1116;
+  color:rgb(231, 125, 125) ;
 }
-.card-body{
-  color:white;
+#social_icons {
+    padding: 2px;
+    float:left;
+    vertical-align:bottom;
+    width: 100wh;
 }
-marquee{
-  color:brown;
-}
-    </style>
-  </head>
-  <body>
-    <div class="card d-flex justify-content-center " style="width: 350px; height:400px;">
-  {{!-- <i class="far fa-id-card mx-auto" width="90px"></i> --}}
-  <div class="card-body">
-    <h5 class="card-title"><i class="far fa-id-card mx-auto"></i>  Details:</h5>
-    <p class="card-text">For more information feel free to contact me.</p>
-    
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Contact us:
+     
+    </h2>
+    <form action="/contact" method="POST" class="myform">
+      <input type="text" class="name" name="name" autocomplete="off" placeholder="Enter your name..">
+      <input type="phone" class="phone" name="phone" autocomplete="off" placeholder="Enter your phone no..">
+      <input type="email" class="emailid" name="emailid" autocomplete="off" placeholder="Enter your email id..">
+      <textarea name="address" id="" cols="10" rows="3" placeholder="enter your address"></textarea>
+      <textarea name="anything" id="" cols="10" rows="3" placeholder="enter project details"></textarea>
+      <button class="btn">Submit</button>
+       <button class="btn"><a href="/about">Go back</a></button>
+
+    </form>
+    <div class="grid_5" id="social_icons">
+	<a href="https://mail.google.com/mail/u/0/#inbox" target="blank"><i class="fas fa-envelope"></i> shahmanvi123@gmail.com</a>
+	<a href="https://www.linkedin.com/" target="blank"><i class="fab fa-linkedin"></i> linkedin.com/in/manvishah06</a>
+	<a href="https://github.com/manvishah" target="blank"><i class="fab fa-github"></i>  github.com/manvishah</a>
+
   </div>
-  <marquee behavior="" direction=""><i class="far fa-address-book">Contact information:</i></marquee>
-  
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><i class="fas fa-envelope"><a href="https://mail.google.com/mail/u/0/#inbox">    shahmanvi123@gmail.com</a></i></li>
-    <li class="list-group-item"><i class="fab fa-linkedin"><a href="https://www.linkedin.com/">     linkedin.com/in/manvishah06</a></i></li>
-    <li class="list-group-item"><i class="fab fa-github"><a href="https://github.com/manvishah">    github.com/manvishah</a></i></li>
-  </ul>
-  <div class="card-body">
-    <a href="/about" class="card-link">Go back</a>
-    
-  </div>
+ 
 </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
 </html>
-
