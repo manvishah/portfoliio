@@ -61,7 +61,7 @@ app.get("*", (req,res)=> {
 app.post('/contact', (req, res)=>{
     var myData = new Contact(req.body);
     myData.save().then(() => {
-        res.render("modal");
+        res.render("Thankyou for your valuable time");
     }).catch(() => {
         res.status(400).send("error");
     })
