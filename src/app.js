@@ -53,10 +53,10 @@ app.get("/contact", (req,res)=> {
     const params = { }
     res.render("contact",params);
 })
-app.get("/modal",(req,res) =>{
-    const params = { }
-    res.render("modal",params);
-})
+// app.get("/modal",(req,res) =>{
+//     const params = { }
+//     res.render("modal",params);
+// })
 app.get("*", (req,res)=> {
     res.status(404).render("error");
 })
@@ -64,7 +64,7 @@ app.get("*", (req,res)=> {
 app.post('/contact', (req, res)=>{
     var myData = new Contact(req.body);
     myData.save().then(() => {
-        res.send("thankyou");
+        res.send("Thankyou for your valuable time");
     }).catch(() => {
         res.status(400).send("error");
     })
